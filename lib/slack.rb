@@ -54,4 +54,4 @@ client_rt.on :message do |data|
   end
 end
 
-client_rt.start_async
+client_rt.start!
