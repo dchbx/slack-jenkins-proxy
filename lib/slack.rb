@@ -30,7 +30,7 @@ client_rt.on :message do |data|
     file_content = file.content
     filename = data.file.name.split(".")
 
-    uri_base = ENV['RUBY_SLACK_JENKINS_JOB_UR']
+    uri_base = ENV['RUBY_SLACK_JENKINS_JOB_URL']
     params = {
       :token => ENV['RUBY_SLACK_JENKINS_JOB_TOKEN'],
       :hbxid_string => file_content,
