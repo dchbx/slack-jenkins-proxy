@@ -23,7 +23,7 @@ client_rt.on :closed do |_data|
 end
 
 client_rt.on :message do |data|
-  if defined?(data.file.id) && data.user != 'U3KD6BR9Q'
+  if defined?(data.file.id) && data.user != ENV['RUBY_SLACK_BOT_USERNAME']
     file = client_web.files_info(
       file: data.file.id
     )
